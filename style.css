@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --LightCyan: rgb(74, 190, 189);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--LightGray);
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 0px 59px -14px rgba(0,0,0,0.42);
+}
+
+/* primeira parte*/
+.container__primeiro {
+  padding: 40px;
+}
+
+.container__primeiro h1 {
+  color: var(--Cyan);
+  margin-bottom: 20px;
+}
+
+.container__primeiro h2 {
+  margin-bottom: 15px;
+  color: var(--BrightYellow);
+}
+
+.container__primeiro p {
+  color: var(--GrayishBlue);
+}
+
+.container__primeiro p {
+  line-height: 1.6;
+}
+
+/* segunda parte*/
+
+.container__segundo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* parte esquerda*/
+
+.segundo__esq {
+  padding: 40px;
+  background-color: var(--Cyan);
+  border-radius: 0 0 0 10px;
+}
+
+.segundo__esq h2 {
+  color: var(--white);
+  margin-bottom: 25px;
+}
+
+.segundo__esq div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.dollar {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.month {
+  color: rgb(108, 218, 219);
+}
+
+.segundo__esq p {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.segundo__esq a {
+  display: block;
+  background-color: var(--BrightYellow);
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 7px;
+  color: var(--white);
+}
+
+/* parte direita*/
+
+.segundo__dir {
+  background-color: var(--LightCyan);
+  padding: 40px;
+  color: var(--white);
+  border-radius: 0 0 10px 0;
+}
+
+.segundo__dir h2{
+  margin-bottom: 30px;
+}
+
+.segundo__dir p{
+  color: rgb(182, 244, 255);
+}
+
+@media (max-width: 670px){
+  .container{
+    max-width: 310px;
+    margin: 80px 0;
+    border-radius: 10px;
+  }
+  .container__segundo{
+    grid-template-columns: 1fr;
+  }
+  .segundo__esq{
+    border-radius: 0px;
+  }
+
+  .segundo__dir{
+    border-radius: 0 0 10px 10px;
+  }
+}
